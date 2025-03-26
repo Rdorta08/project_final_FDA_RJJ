@@ -1,0 +1,51 @@
+[2024-05-20 23:48:10 +0000] [13208] [INFO] Starting gunicorn 22.0.0
+[2024-05-20 23:48:10 +0000] [13208] [INFO] Listening at: http://0.0.0.0:8000 (13208)
+[2024-05-20 23:48:10 +0000] [13208] [INFO] Using worker: sync
+[2024-05-20 23:48:10 +0000] [13220] [INFO] Booting worker with pid: 13220
+[2024-05-20 23:48:10 +0000] [13221] [INFO] Booting worker with pid: 13221
+[2024-05-20 23:48:10 +0000] [13223] [INFO] Booting worker with pid: 13223
+[2024-05-20 23:48:10 +0000] [13224] [INFO] Booting worker with pid: 13224
+[2024-05-21 00:22:42 +0000] [13208] [ERROR] Worker (pid:13221) was sent SIGHUP!
+[2024-05-21 00:22:42 +0000] [23447] [INFO] Booting worker with pid: 23447
+[2024-05-21 00:22:42 +0000] [13208] [INFO] Handling signal: hup
+[2024-05-21 00:22:42 +0000] [13208] [INFO] Hang up: Master
+[2024-05-21 00:22:42 +0000] [13208] [ERROR] Worker (pid:13224) was sent SIGHUP!
+[2024-05-21 00:22:42 +0000] [23448] [INFO] Booting worker with pid: 23448
+[2024-05-21 00:22:42 +0000] [23450] [INFO] Booting worker with pid: 23450
+[2024-05-21 00:22:42 +0000] [23449] [INFO] Booting worker with pid: 23449
+[2024-05-21 00:22:42 +0000] [13208] [ERROR] Worker (pid:13223) was sent SIGHUP!
+[2024-05-21 00:22:42 +0000] [13208] [ERROR] Worker (pid:13220) was sent SIGHUP!
+[2024-05-21 00:22:42 +0000] [23451] [INFO] Booting worker with pid: 23451
+[2024-05-21 00:22:47 +0000] [23447] [INFO] Worker exiting (pid: 23447)
+[2024-05-21 00:22:47 +0000] [13208] [ERROR] Worker (pid:23447) was sent SIGTERM!
+[2024-05-21 17:10:37 +0000] [27558] [INFO] Starting gunicorn 22.0.0
+[2024-05-21 17:10:37 +0000] [27558] [INFO] Listening at: http://127.0.0.1:8000 (27558)
+[2024-05-21 17:10:37 +0000] [27558] [INFO] Using worker: sync
+[2024-05-21 17:10:37 +0000] [27570] [INFO] Booting worker with pid: 27570
+[2024-05-21 17:10:53,968] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/vscode/.local/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vscode/.local/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vscode/.local/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vscode/.local/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/workspaces/proyecto_final_icfes_definitivo/app.py", line 259, in home
+    return render_template("index.html", questions=questions, answers=answers, prediction=prediction)
+  File "/home/vscode/.local/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/vscode/.local/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/vscode/.local/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/vscode/.local/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/workspaces/proyecto_final_icfes_definitivo/templates/index.html", line 67, in top-level template code
+    {% if prediction is not None %}
+jinja2.exceptions.TemplateRuntimeError: No test named 'None' found.
+[2024-05-21 17:52:22 +0000] [27558] [INFO] Handling signal: hup
+[2024-05-21 17:52:22 +0000] [27558] [INFO] Hang up: Master
+[2024-05-21 17:52:22 +0000] [27558] [ERROR] Worker (pid:27570) was sent SIGHUP!
+[2024-05-21 17:52:22 +0000] [44352] [INFO] Booting worker with pid: 44352
